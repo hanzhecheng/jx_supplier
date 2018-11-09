@@ -38,7 +38,7 @@ module.exports = {
   },
 
   /*
-   ** Global CSS
+   ** 全局样式
    */
   css: [
     'element-ui/lib/theme-chalk/index.css',
@@ -46,7 +46,7 @@ module.exports = {
   ],
 
   /*
-   ** Plugins to load before mounting the App
+   ** 第三方插件
    */
   plugins: [
     '@/plugins/element-ui',
@@ -57,7 +57,7 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
+    // 模块，proxy用于代理，用发类似单页应用，详见底部proxy配置
     '@nuxtjs/axios',
     '@nuxtjs/proxy'
   ],
@@ -76,6 +76,7 @@ module.exports = {
      ** webpack设置
      */
     extend(config, ctx) {
+      //利用svg-sprite-loader处理svg
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
       svgRule.exclude = [resolve(__dirname, 'assets/svg')]
       config.module.rules.push({
