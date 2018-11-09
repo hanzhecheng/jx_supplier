@@ -4,7 +4,7 @@
 
 ### 2018/11/9 更新
 - 修改nuxt.config.js
- - 增加proxy代理
- - 增加svg-icon组件
- - 增加sass处理
- - 完成首页基础样式
+   - 增加proxy代理
+   - 增加svg-icon组件
+   - 增加sass处理
+   - 完成首页基础样式
