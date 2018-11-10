@@ -42,7 +42,6 @@ module.exports = {
    */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    'assets/css/main.scss'
   ],
 
   /*
@@ -51,6 +50,7 @@ module.exports = {
   plugins: [
     '@/plugins/element-ui',
     '@/plugins/svg-icon',
+    '@/plugins/axios'
   ],
 
   /*
@@ -66,6 +66,7 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+   
   },
 
   /*
@@ -93,8 +94,8 @@ module.exports = {
   nuxt Proxy设置
   */
   proxy: [
-    ['/xx', {
-      target: 'https://xxx.xxx.com/',
+    ['/xxx', {
+      target: 'https://xxx.xx.com/',
       pathRewrite: {
         '^/xx': '/xx'
       }
